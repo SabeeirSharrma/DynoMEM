@@ -33,7 +33,7 @@ dependencies {
 
 	include(modImplementation(fabricApi.module("fabric-resource-loader-v0", project.fabric_api_version)))
 
-    // Bundle FerriteCore 1.20.1 inside Hydrogen
+    // Bundle FerriteCore 1.20.1 inside dynomem
     modImplementation include("maven.modrinth:ferrite-core:6.0.1-fabric")
 }
 

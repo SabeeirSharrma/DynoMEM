@@ -1,5 +1,5 @@
 {
-  "package": "me.jellysquid.mods.hydrogen.mixin",
+  "package": "com.sabcancode.dynomem.mixin",
   "required": true,
   "compatibilityLevel": "JAVA_16",
   "injectors": {

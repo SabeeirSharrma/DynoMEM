@@ -1,4 +1,4 @@
-package me.jellysquid.mods.hydrogen.common.dedup;
+package com.sabcancode.dynomem.common.dedup;
 
 import it.unimi.dsi.fastutil.Hash;
 import it.unimi.dsi.fastutil.objects.ObjectOpenCustomHashSet;

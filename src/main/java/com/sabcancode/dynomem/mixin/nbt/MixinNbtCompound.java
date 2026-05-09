@@ -1,4 +1,4 @@
-package me.jellysquid.mods.hydrogen.mixin.nbt;
+package com.sabcancode.dynomem.mixin.nbt;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;

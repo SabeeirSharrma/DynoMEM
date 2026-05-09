@@ -5,7 +5,7 @@ This is an updated version of the Hydrogen mod for [DynoClient](https://ynoclien
 
 ---
 
-![Project icon](src/main/resources/assets/hydrogen/icon.png?raw=true)
+![Project icon](src/main/resources/assets/dynomem/icon.png?raw=true)
 
 # DynoMEM (for Fabric)
 ![GitHub license](https://img.shields.io/github/license/SabeeirSharrma/DynoMEM.svg)

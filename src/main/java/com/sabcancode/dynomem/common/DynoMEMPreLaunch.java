@@ -1,8 +1,8 @@
-package me.jellysquid.mods.hydrogen.common;
+package com.sabcancode.dynomem.common;
 
 import net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint;
 
-public class HydrogenPreLaunch implements PreLaunchEntrypoint {
+public class DynoMEMPreLaunch implements PreLaunchEntrypoint {
     @Override
     public void onPreLaunch() {
     }

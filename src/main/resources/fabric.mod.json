@@ -13,17 +13,17 @@
     "issues": "https://github.com/SabeeirSharrma/DynoMEM/issues"
   },
   "license": "LGPL-3.0-only",
-  "icon": "assets/hydrogen/icon.png",
+  "icon": "assets/dynomem/icon.png",
   "environment": "*",
   "mixins": [
-    "hydrogen.mixins.json"
+    "dynomem.mixins.json"
   ],
   "entrypoints": {
     "preLaunch": [
-      "me.jellysquid.mods.hydrogen.common.HydrogenPreLaunch"
+      "com.sabcancode.dynomem.common.DynoMEMPreLaunch"
     ],
     "client": [
-      "me.jellysquid.mods.hydrogen.client.HydrogenClient"
+      "com.sabcancode.dynomem.client.DynoMEMClient"
     ]
   },
   "depends": {

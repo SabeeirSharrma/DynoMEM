@@ -1,4 +1,4 @@
-package me.jellysquid.mods.hydrogen.common.util;
+package com.sabcancode.dynomem.common.util;
 
 import java.util.function.Predicate;
 

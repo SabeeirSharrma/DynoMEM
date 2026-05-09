@@ -1,6 +1,6 @@
-package me.jellysquid.mods.hydrogen.mixin.util;
+package com.sabcancode.dynomem.mixin.util;
 
-import me.jellysquid.mods.hydrogen.common.dedup.IdentifierCaches;
+import com.sabcancode.dynomem.common.dedup.IdentifierCaches;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
