@@ -2,7 +2,7 @@
 
 When opening issues, please be sure to include the following information as applicable.
 
-- The exact version of the mod you are running, such as `0.1.0-fabric`, and the version of Fabric/Forge you are using.
+- The exact version of the mod you are running, such as `0.3-fabric`, and the version of Fabric you are using.
 - If your issue is a crash, attach the latest client or server log and the complete crash report as a file. You can
 attach these as a file (preferred) or host them on a service such as [GitHub Gist](https://gist.github.com/) or [Hastebin](https://hastebin.com/).
 - If your issue is a bug or otherwise unexpected behavior, explain what you expected to happen.
@@ -10,20 +10,18 @@ attach these as a file (preferred) or host them on a service such as [GitHub Gis
 
 ## Pull Requests
 
-It's super awesome to hear you're wishing to contribute to the project! Before you open a pull request, you'll need to
+It's great to hear you're wishing to contribute to the project! Before you open a pull request, you'll need to
 give a quick read to the following guidelines.
 
 ### Contributor License Agreement (CLA)
 
 By submitting changes to this repository, you are hereby agreeing that:
 
-- Your contributions will be licensed irrecoverably under the [GNU LGPLv3](https://www.gnu.org/licenses/lgpl-3.0.html).
+- Your contributions will be licensed under the [GNU LGPLv3](https://www.gnu.org/licenses/lgpl-3.0.html).
 - Your contributions are of your own work and free of legal restrictions (such as patents and copyrights) or other
 issues which would pose issues for inclusion or distribution under the above license.
 
-If you do not agree to these terms, please do not submit contributions to this repository. If you have any questions
-about these terms, feel free to get in contact with me through the [public Discord server](https://jellysquid.me/discord) or
-through opening an issue.
+If you do not agree to these terms, please do not submit contributions to this repository.
 
 ### Code Style
 
