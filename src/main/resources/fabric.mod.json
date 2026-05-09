@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "hydrogen",
+  "id": "dynomem",
   "version": "${version}",
-  "name": "Hydrogen",
-  "description": "A Minecraft mod designed to reduce the memory usage of the game.",
+  "name": "DynoMEM",
+  "description": "A combined memory optimization mod featuring Hydrogen deduplication and FerriteCore optimizations.",
   "authors": [
     "JellySquid"
   ],
@@ -26,9 +26,9 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.11.0",
-    "fabric-resource-loader-v0": ">=0.4",
-    "minecraft": ["1.17", "1.17.1"]
+    "fabricloader": ">=0.15.0",
+    "fabric-resource-loader-v0": ">=0.11",
+    "minecraft": ["1.20.1"]
   },
   "breaks": {
     "optifabric": "*"

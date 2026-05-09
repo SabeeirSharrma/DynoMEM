@@ -1,5 +1,11 @@
 plugins {
-    id 'fabric-loom' version '0.8-SNAPSHOT'
+    id 'fabric-loom' version '1.6-SNAPSHOT'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 archivesBaseName = "${project.archives_base_name}-mc${project.minecraft_version}"
@@ -17,9 +23,7 @@ if (build_id != null) {
     version += "+build.${build_id}"
 }
 
-minecraft {
-    refmapName = "mixins.hydrogen.refmap.json"
-}
+
 
 dependencies {
 	//to change the versions see the gradle.properties file
@@ -28,25 +32,25 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	include(modImplementation(fabricApi.module("fabric-resource-loader-v0", project.fabric_api_version)))
+
+    // Bundle FerriteCore 1.20.1 inside Hydrogen
+    modImplementation include("maven.modrinth:ferrite-core:6.0.1-fabric")
 }
 
 repositories {
 	maven { url = "https://jitpack.io" }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
-if (project.use_third_party_mods) {
-	repositories {
-		maven { url = "https://maven.gegy.dev" }
-	}
 
-	dependencies {
-		// DataBreaker applies a number of patches to eliminate the loading of data fixers
-		// This greatly reduces the amount of time needed to start the game, but is generally unsafe in production
-		modRuntime ("supercoder79:databreaker:${project.databreaker_version}") {
-			transitive = false
-		}
-	}
-}
+
+
 
 processResources {
 	inputs.property "version", project.version
@@ -67,7 +71,7 @@ tasks.withType(JavaCompile) {
 // if it is present.
 // If you remove this task, sources will not be generated.
 task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = "sources"
+    archiveClassifier.set("sources")
     from sourceSets.main.allSource
     from "LICENSE"
 }
