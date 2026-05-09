@@ -3,7 +3,7 @@
   "id": "dynomem",
   "version": "${version}",
   "name": "DynoMEM",
-  "description": "A combined memory optimization mod featuring Hydrogen deduplication and FerriteCore optimizations.",
+  "description": "Reduces the memory usage of the game. Based on the original Hydrogen mod by jellysquid3, made for DynoClient.",
   "authors": [
     "JellySquid3",
     "SabeeirSharrma aka SabCanCode"
