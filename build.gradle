@@ -16,7 +16,7 @@ def build_release = System.getenv("BUILD_RELEASE") == "true"
 def build_id = System.getenv("BUILD_ID")
 
 if (!build_release) {
-    version += "-SNAPSHOT"
+    version += "-RELEASE"
 }
 
 if (build_id != null) {
