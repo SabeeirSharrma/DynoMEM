@@ -10,7 +10,7 @@ public class PlatformHooks implements IPlatformHooks {
                 .mapFieldName(
                         "intermediary",
                         "net.minecraft.class_4970$class_4971",
-                        "field_24736",
+                        "field_23166",
                         "Lnet/minecraft/class_4970$class_4971$class_3752;"
                 );
     }
