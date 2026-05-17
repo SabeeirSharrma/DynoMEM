@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "dynomem",
+  "version": "${version}",
+  "name": "DynoMEM",
+  "description": "RAM and Thread optimizer for Fabric. Reduces memory usage through blockstate deduplication, compact neighbor tables, NBT optimization, and efficient threading detection. Based on Hydrogen by Jellysquid3 and ferritecore by malte0811. Made for DynoClient.",
+  "authors": [
+    "JellySquid3",
+    "malte0811",
+    "SabeeirSharrma aka SabCanCode"
+  ],
+  "contact": {
+    "sources": "https://github.com/SabeeirSharrma/DynoMEM",
+    "issues": "https://github.com/SabeeirSharrma/DynoMEM/issues"
+  },
+  "license": "LGPL-3.0-only",
+  "icon": "assets/dynomem/icon.png",
+  "environment": "*",
+  "mixins": [
+    "dynomem.accessors.mixin.json",
+    "dynomem.blockstatecache.mixin.json",
+    "dynomem.fastmap.mixin.json",
+    "dynomem.threaddetec.mixin.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-resource-loader-v0": ">=0.11",
+    "minecraft": ["1.20.1"]
+  },
+  "breaks": {
+    "optifabric": "*",
+    "hydrogen": "<=0.3",
+    "ferritecore": "*"
+  }
+}
