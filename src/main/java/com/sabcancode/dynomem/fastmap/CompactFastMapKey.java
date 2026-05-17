@@ -6,7 +6,7 @@ package com.sabcancode.dynomem.fastmap;
 public record CompactFastMapKey(int mapFactor, int numValues) implements FastMapKey {
     @Override
     public int replaceIn(int mapIndex, int valueIndex) {
-        if (valueIndex >= numValues) {
+        if (valueIndex < 0 || valueIndex >= numValues) {
             return -1;
         }
         final int lowerData = mapIndex % mapFactor;

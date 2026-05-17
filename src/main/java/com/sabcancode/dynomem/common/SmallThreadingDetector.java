@@ -105,6 +105,7 @@ public class SmallThreadingDetector {
                 releaseThread = Thread.currentThread();
             }
             notifyAll();
+            boolean wasInterrupted = false;
             try {
                 waitUntilOrCrash(() -> acquireThread != null && releaseThread != null);
                 if (role == ThreadRole.ACQUIRE) {
@@ -114,7 +115,27 @@ public class SmallThreadingDetector {
                     waitUntilOrCrash(() -> mainException != null);
                 }
             } catch (InterruptedException x) {
-                Thread.currentThread().interrupt();
+                wasInterrupted = true;
+                // Don't bail out yet — we must ensure mainException is populated
+                // so crashAcquire/crashRelease callers never see null.
+                if (role == ThreadRole.ACQUIRE && mainException == null) {
+                    // We are the ACQUIRE thread responsible for creating the exception.
+                    // Wait for releaseThread if still null, then create mainException.
+                    while (releaseThread == null) {
+                        try { this.wait(1000); } catch (InterruptedException ignored) { }
+                    }
+                    mainException = LockHelper.crash(name, releaseThread);
+                    notifyAll();
+                } else if (mainException == null) {
+                    // RELEASE/BYSTANDER: spin until ACQUIRE thread sets mainException.
+                    while (mainException == null) {
+                        try { this.wait(1000); } catch (InterruptedException ignored) { }
+                    }
+                }
+            } finally {
+                if (wasInterrupted) {
+                    Thread.currentThread().interrupt();
+                }
             }
         }
 

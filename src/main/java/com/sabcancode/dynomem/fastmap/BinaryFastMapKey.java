@@ -28,7 +28,7 @@ public record BinaryFastMapKey(int numValues, byte firstBitInValue, byte firstBi
 
     @Override
     public int replaceIn(int mapIndex, int valueIndex) {
-        if (valueIndex >= numValues) {
+        if (valueIndex < 0 || valueIndex >= numValues) {
             return -1;
         }
         final int keepMask = ~lowestNBits(firstBitAfterValue) | lowestNBits(firstBitInValue);

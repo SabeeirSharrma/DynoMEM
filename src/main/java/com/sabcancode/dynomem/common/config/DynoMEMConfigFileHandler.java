@@ -27,7 +27,9 @@ public class DynoMEMConfigFileHandler {
             Files.createFile(config);
         }
         Properties propsInFile = new Properties();
-        propsInFile.load(Files.newInputStream(config));
+        try (var in = Files.newInputStream(config)) {
+            propsInFile.load(in);
+        }
         Object2BooleanMap<String> existingOptions = new Object2BooleanOpenHashMap<>();
         for (String key : propsInFile.stringPropertyNames()) {
             existingOptions.put(key, Boolean.parseBoolean(propsInFile.getProperty(key)));

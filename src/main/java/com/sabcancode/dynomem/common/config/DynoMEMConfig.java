@@ -64,7 +64,11 @@ public class DynoMEMConfig {
             try {
                 handler.readAndUpdateConfig(options);
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                LOGGER.warn("Failed to read DynoMEM config, falling back to defaults", e);
+                // Apply defaults so isEnabled() never returns null
+                for (Option o : options) {
+                    o.set(name -> o.getDefaultValue());
+                }
             }
         }
     }
