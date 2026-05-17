@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+bin/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fabric
+run/
+logs/
+*.log
+
+# Distribution
+*.jar
+!gradle/wrapper/gradle-wrapper.jar

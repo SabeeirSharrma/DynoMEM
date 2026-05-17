@@ -17,20 +17,11 @@
   "icon": "assets/dynomem/icon.png",
   "environment": "*",
   "mixins": [
-    "dynomem.mixins.json",
     "dynomem.accessors.mixin.json",
     "dynomem.blockstatecache.mixin.json",
     "dynomem.fastmap.mixin.json",
     "dynomem.threaddetec.mixin.json"
   ],
-  "entrypoints": {
-    "preLaunch": [
-      "com.sabcancode.dynomem.common.DynoMEMPreLaunch"
-    ],
-    "client": [
-      "com.sabcancode.dynomem.client.DynoMEMClient"
-    ]
-  },
   "depends": {
     "fabricloader": ">=0.15.0",
     "fabric-resource-loader-v0": ">=0.11",
